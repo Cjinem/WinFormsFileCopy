@@ -62,7 +62,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 269);
+            panel1.Size = new Size(800, 210);
             panel1.TabIndex = 0;
             // 
             // btnClose
@@ -83,6 +83,7 @@
             btnCopy.TabIndex = 9;
             btnCopy.Text = "Copy";
             btnCopy.UseVisualStyleBackColor = true;
+            btnCopy.Click += btnCopy_Click;
             // 
             // label3
             // 
@@ -113,6 +114,7 @@
             btnDestDir.TabIndex = 6;
             btnDestDir.Text = "...";
             btnDestDir.UseVisualStyleBackColor = false;
+            btnDestDir.Click += btnDestDir_Click;
             // 
             // btnSourceDir
             // 
