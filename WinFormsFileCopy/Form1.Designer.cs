@@ -41,6 +41,7 @@
             cboDest = new ComboBox();
             cboSource = new ComboBox();
             listBox1 = new ListBox();
+            folderBrowserDialog1 = new FolderBrowserDialog();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -123,6 +124,7 @@
             btnSourceDir.TabIndex = 5;
             btnSourceDir.Text = "...";
             btnSourceDir.UseVisualStyleBackColor = false;
+            btnSourceDir.Click += btnSourceDir_Click;
             // 
             // label2
             // 
@@ -177,10 +179,14 @@
             listBox1.Dock = DockStyle.Bottom;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(0, 266);
+            listBox1.Location = new Point(0, 206);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(800, 184);
+            listBox1.Size = new Size(800, 244);
             listBox1.TabIndex = 1;
+            // 
+            // folderBrowserDialog1
+            // 
+            folderBrowserDialog1.HelpRequest += folderBrowserDialog1_HelpRequest;
             // 
             // Form1
             // 
@@ -212,5 +218,6 @@
         private ComboBox cboDest;
         private ComboBox cboSource;
         private ListBox listBox1;
+        private FolderBrowserDialog folderBrowserDialog1;
     }
 }

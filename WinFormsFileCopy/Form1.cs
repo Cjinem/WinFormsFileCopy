@@ -11,5 +11,19 @@ namespace WinFormsFileCopy
         {
             Close();
         }
+
+        private void btnSourceDir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = folderBrowserDialog1.ShowDialog();
+            if (dialogResult == DialogResult.OK) 
+            {
+                folderBrowserDialog1.SelectedPath
+            }
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
+        }
     }
 }
