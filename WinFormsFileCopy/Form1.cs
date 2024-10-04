@@ -43,6 +43,13 @@ namespace WinFormsFileCopy
         private void btnCopy_Click(object sender, EventArgs e)
         {
             string[] files = Directory.GetFiles(cboSource.Text, cboFilter.Text);
+            //foreach(ElementTyp ElementName in Menge)
+            foreach (string strFile in files)
+            {
+                string strDest = Path.Combine(cboDest.Text, Path.GetFileName(strFile));
+                File.Copy(strFile, strDest);
+                listBox1.Items.Add("Copy from: " + strFile + "to: " + strDest);
+            }
         }
     }
 }

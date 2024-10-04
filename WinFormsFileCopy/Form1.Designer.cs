@@ -149,7 +149,7 @@
             // cboFilter
             // 
             cboFilter.FormattingEnabled = true;
-            cboFilter.Items.AddRange(new object[] { "*.*", "*.pdf", "*.png" });
+            cboFilter.Items.AddRange(new object[] { "*.*", "*.pdf", "*.png", "*.vsdx" });
             cboFilter.Location = new Point(543, 83);
             cboFilter.Name = "cboFilter";
             cboFilter.Size = new Size(160, 23);
