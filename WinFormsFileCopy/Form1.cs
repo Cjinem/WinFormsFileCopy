@@ -48,7 +48,7 @@ namespace WinFormsFileCopy
             {
                 string strDest = Path.Combine(cboDest.Text, Path.GetFileName(strFile));
                 File.Copy(strFile, strDest);
-                listBox1.Items.Add("Copy from: " + strFile + "to: " + strDest);
+                listBox1.Items.Add("Copy from: " + strFile + " to: " + strDest);
             }
         }
     }
