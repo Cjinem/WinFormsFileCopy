@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            listBox1 = new ListBox();
-            cboSource = new ComboBox();
-            cboDest = new ComboBox();
-            cboFilter = new ComboBox();
-            label1 = new Label();
-            label2 = new Label();
-            btnSourceDir = new Button();
-            btnDestDir = new Button();
-            chkRecursive = new CheckBox();
-            label3 = new Label();
-            btnCopy = new Button();
             btnClose = new Button();
+            btnCopy = new Button();
+            label3 = new Label();
+            chkRecursive = new CheckBox();
+            btnDestDir = new Button();
+            btnSourceDir = new Button();
+            label2 = new Label();
+            label1 = new Label();
+            cboFilter = new ComboBox();
+            cboDest = new ComboBox();
+            cboSource = new ComboBox();
+            listBox1 = new ListBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,68 +64,43 @@
             panel1.Size = new Size(800, 269);
             panel1.TabIndex = 0;
             // 
-            // listBox1
+            // btnClose
             // 
-            listBox1.Dock = DockStyle.Bottom;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(0, 266);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(800, 184);
-            listBox1.TabIndex = 1;
+            btnClose.Location = new Point(543, 155);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(140, 23);
+            btnClose.TabIndex = 10;
+            btnClose.Text = "Close";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
-            // cboSource
+            // btnCopy
             // 
-            cboSource.FormattingEnabled = true;
-            cboSource.Location = new Point(63, 81);
-            cboSource.Name = "cboSource";
-            cboSource.Size = new Size(249, 23);
-            cboSource.TabIndex = 0;
+            btnCopy.Location = new Point(543, 126);
+            btnCopy.Name = "btnCopy";
+            btnCopy.Size = new Size(140, 23);
+            btnCopy.TabIndex = 9;
+            btnCopy.Text = "Copy";
+            btnCopy.UseVisualStyleBackColor = true;
             // 
-            // cboDest
+            // label3
             // 
-            cboDest.FormattingEnabled = true;
-            cboDest.Location = new Point(63, 146);
-            cboDest.Name = "cboDest";
-            cboDest.Size = new Size(249, 23);
-            cboDest.TabIndex = 1;
+            label3.AutoSize = true;
+            label3.Location = new Point(543, 60);
+            label3.Name = "label3";
+            label3.Size = new Size(33, 15);
+            label3.TabIndex = 8;
+            label3.Text = "Filter";
             // 
-            // cboFilter
+            // chkRecursive
             // 
-            cboFilter.FormattingEnabled = true;
-            cboFilter.Location = new Point(543, 81);
-            cboFilter.Name = "cboFilter";
-            cboFilter.Size = new Size(160, 23);
-            cboFilter.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(66, 60);
-            label1.Name = "label1";
-            label1.Size = new Size(43, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Source";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(63, 126);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Destination";
-            // 
-            // btnSourceDir
-            // 
-            btnSourceDir.AutoSize = true;
-            btnSourceDir.BackColor = SystemColors.ButtonFace;
-            btnSourceDir.Location = new Point(318, 81);
-            btnSourceDir.Name = "btnSourceDir";
-            btnSourceDir.Size = new Size(28, 25);
-            btnSourceDir.TabIndex = 5;
-            btnSourceDir.Text = "...";
-            btnSourceDir.UseVisualStyleBackColor = false;
+            chkRecursive.AutoSize = true;
+            chkRecursive.Location = new Point(352, 83);
+            chkRecursive.Name = "chkRecursive";
+            chkRecursive.Size = new Size(73, 19);
+            chkRecursive.TabIndex = 7;
+            chkRecursive.Text = "recursive";
+            chkRecursive.UseVisualStyleBackColor = true;
             // 
             // btnDestDir
             // 
@@ -138,42 +113,74 @@
             btnDestDir.Text = "...";
             btnDestDir.UseVisualStyleBackColor = false;
             // 
-            // chkRecursive
+            // btnSourceDir
             // 
-            chkRecursive.AutoSize = true;
-            chkRecursive.Location = new Point(352, 83);
-            chkRecursive.Name = "chkRecursive";
-            chkRecursive.Size = new Size(73, 19);
-            chkRecursive.TabIndex = 7;
-            chkRecursive.Text = "recursive";
-            chkRecursive.UseVisualStyleBackColor = true;
+            btnSourceDir.AutoSize = true;
+            btnSourceDir.BackColor = SystemColors.ButtonFace;
+            btnSourceDir.Location = new Point(318, 81);
+            btnSourceDir.Name = "btnSourceDir";
+            btnSourceDir.Size = new Size(28, 25);
+            btnSourceDir.TabIndex = 5;
+            btnSourceDir.Text = "...";
+            btnSourceDir.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // label2
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(543, 60);
-            label3.Name = "label3";
-            label3.Size = new Size(33, 15);
-            label3.TabIndex = 8;
-            label3.Text = "Filter";
+            label2.AutoSize = true;
+            label2.Location = new Point(63, 126);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Destination";
             // 
-            // btnCopy
+            // label1
             // 
-            btnCopy.Location = new Point(543, 126);
-            btnCopy.Name = "btnCopy";
-            btnCopy.Size = new Size(140, 23);
-            btnCopy.TabIndex = 9;
-            btnCopy.Text = "Copy";
-            btnCopy.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Location = new Point(66, 60);
+            label1.Name = "label1";
+            label1.Size = new Size(43, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Source";
             // 
-            // btnClose
+            // cboFilter
             // 
-            btnClose.Location = new Point(543, 155);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(140, 23);
-            btnClose.TabIndex = 10;
-            btnClose.Text = "Close";
-            btnClose.UseVisualStyleBackColor = true;
+            cboFilter.FormattingEnabled = true;
+            cboFilter.Items.AddRange(new object[] { "*.*", "*.pdf", "*.png" });
+            cboFilter.Location = new Point(543, 83);
+            cboFilter.Name = "cboFilter";
+            cboFilter.Size = new Size(160, 23);
+            cboFilter.TabIndex = 2;
+            cboFilter.Text = "*.*";
+            // 
+            // cboDest
+            // 
+            cboDest.FormattingEnabled = true;
+            cboDest.Items.AddRange(new object[] { "C:\\temp1", "C:\\temp2" });
+            cboDest.Location = new Point(63, 146);
+            cboDest.Name = "cboDest";
+            cboDest.Size = new Size(249, 23);
+            cboDest.TabIndex = 1;
+            cboDest.Text = "C:\\temp2";
+            // 
+            // cboSource
+            // 
+            cboSource.FormattingEnabled = true;
+            cboSource.Items.AddRange(new object[] { "C:\\temp1", "C:\\temp2" });
+            cboSource.Location = new Point(63, 81);
+            cboSource.Name = "cboSource";
+            cboSource.Size = new Size(249, 23);
+            cboSource.TabIndex = 0;
+            cboSource.Text = "C:\\temp1";
+            // 
+            // listBox1
+            // 
+            listBox1.Dock = DockStyle.Bottom;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(0, 266);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(800, 184);
+            listBox1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -183,6 +190,7 @@
             Controls.Add(listBox1);
             Controls.Add(panel1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "WinFormsFileCopy";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
